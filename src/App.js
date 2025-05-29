@@ -71,13 +71,13 @@ function App() {
         </button>
       </div>
       <div className="item-list">
-        {tasks.map((task, i) => {
+        {tasks.map((task) => {
           if (statusBtn === "all")
             return (
               <Item
                 task={task.name}
                 id={task.id}
-                key={i}
+                key={task.id}
                 status={task.status}
                 handleStatus={handleStatus}
                 handleDelete={handleDelete}
@@ -88,7 +88,7 @@ function App() {
               <Item
                 task={task.name}
                 id={task.id}
-                key={i}
+                key={task.id}
                 status={task.status}
                 handleStatus={handleStatus}
                 handleDelete={handleDelete}
